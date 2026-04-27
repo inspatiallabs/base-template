@@ -1,0 +1,301 @@
+{
+  "$schema": "./.inspatial/schema/deno.json",
+  "inspatial": {
+    "kit": {
+      "server": {
+        "port": 6310,
+        "strictPort": false,
+        "portMetadata": "all",
+        "base": "/",
+        "host": "localhost",
+        "cacheControl": "no-store",
+        "progressiveHtmlStream": true,
+        "liveReload": true,
+        "responseCacheEnabled": true,
+        "responseCacheTtlMs": 2000,
+        "responseCacheMaxEntries": 256,
+        "assetRouteBase": "/asset/"
+      },
+      "paths": {
+        "srcDir": "./src",
+        "distDir": "./dist",
+        "typesDir": "./.inspatial/types",
+        "styleDir": "./.inspatial/style",
+        "schemaDir": "./.inspatial/schema",
+        "htmlEntry": "./index.html",
+        "htmlDist": "./dist/index.html",
+        "assetSrcDir": "./src/asset",
+        "assetDistDir": "./dist/asset",
+        "favicon": "./src/asset/favicon.png",
+        "renderEntry": "./src/config/render.ts",
+        "windowEntry": "./src/landing/window.tsx",
+        "sceneEntry": "./src/app/scene.tsx",
+        "componentEntry": "./src/app/component.tsx",
+        "themeEntry": "./src/config/theme.ts",
+        "cloudEntry": "./src/config/cloud.ts",
+        "denoConfig": "./deno.json",
+        "projectRoot": ".",
+        "cssInput": "./src/config/theme.css",
+        "cssOutput": "./dist/kit.css",
+        "jsOutput": "./dist/bundle.js",
+        "routeManifest": "./.inspatial/route/route-manifest.generated.ts",
+        "routeViews": "./.inspatial/route/route-views.generated.ts",
+        "routeTypes": "./.inspatial/route/route-types.generated.d.ts",
+        "assetManifest": "./.inspatial/asset/asset-manifest.generated.d.ts"
+      },
+      "watch": {
+        "include": [
+          "./src",
+          "./index.html"
+        ],
+        "includeFramework": [
+          "@inspatial/kit",
+          "../kit/src",
+          "../kit/modules"
+        ],
+        "exclude": [
+          "node_modules",
+          "dist",
+          ".git",
+          ".inspatial",
+          ".vscode",
+          "coverage"
+        ]
+      },
+      "state": {
+        "pattern": "explicit"
+      },
+      "test": {
+        "pattern": "bdd"
+      },
+      "runtime": {
+        "markup": "jsx"
+      },
+      "intelligence": {
+        "codegen": true,
+        "importStyle": "app",
+        "autoImports": {
+          "enabled": true,
+          "write": true,
+          "formats": [
+            "ts",
+            "tsx",
+            "js",
+            "jsx",
+            "in"
+          ],
+          "excludeIndex": true
+        }
+      },
+      "workspace": "detached",
+      "build": {
+        "js": {
+          "entrypoints": [],
+          "outputDir": "./dist",
+          "output": "",
+          "platform": "browser",
+          "minify": true,
+          "codeSplitting": true,
+          "splitStrategy": "route-based",
+          "format": "esm",
+          "inlineImports": false,
+          "external": [],
+          "packages": "bundle",
+          "write": true,
+          "sourcemap": false
+        },
+        "style": {
+          "engine": "iss",
+          "input": "./src/config/theme.css",
+          "output": "./dist/kit.css",
+          "contentGlobs": [
+            "src/**/*.{ts,tsx,js,jsx,in}"
+          ],
+          "pattern": "explicit"
+        },
+        "html": {
+          "enabled": true,
+          "preconnectOrigins": [],
+          "preloadRouteChunks": false
+        },
+        "timing": {
+          "debounceMs": 100,
+          "waitAttempts": 50,
+          "waitIntervalMs": 100,
+          "cssStabilizeAttempts": 10,
+          "cssStabilizeIntervalMs": 100
+        }
+      },
+      "discovery": {
+        "renderSearch": [
+          "./render.ts",
+          "./src/render.ts",
+          "./src/config/render.ts",
+          "./config/render.ts",
+          "./app/render.ts"
+        ],
+        "kitRoots": [
+          "@inspatial/kit",
+          "../kit/src",
+          "../kit/modules"
+        ]
+      },
+      "module": {
+        "scopes": [
+          "@in",
+          "@inspatial",
+          "@spatial",
+          "@xr"
+        ],
+        "packageManagers": [
+          "jsr"
+        ],
+        "security": "strict"
+      }
+    }
+  },
+  "nodeModulesDir": "auto",
+  "tasks": {
+    "dev": "deno run --allow-net --allow-read --allow-write --allow-env --allow-run src/config/render.ts",
+    "tunnel": "deno run --allow-run --allow-read @in/build/inspatial-serve/tunnel --allow-net --allow-read --allow-write --allow-env --allow-run src/config/render.ts",
+    "build": "deno task dev -- --build",
+    "serve": "deno task dev",
+    "kit:lighthouse": "deno run -A .inspatial/scripts/lighthouse.ts",
+    "routes": "deno run -A .inspatial/scripts/route.ts",
+    "test": "deno test --allow-all --no-check",
+    "benchmark": "deno bench --allow-all --no-check",
+    "clean": "rm -rf dist && rm -rf node_modules && rm -rf deno.lock && rm -rf src/app/.inroute && rm -rf .inspatial && rm -rf coverage"
+  },
+  "compilerOptions": {
+    "lib": [
+      "ES2022",
+      "DOM",
+      "DOM.Iterable",
+      "deno.ns"
+    ],
+    "jsx": "react-jsx",
+    "jsxImportSource": "@inspatial/kit"
+  },
+  "lint": {
+    "rules": {
+      "tags": [
+        "recommended",
+        "jsx",
+        "jsr"
+      ],
+      "include": [
+        "no-var",
+        "no-window",
+        "no-unused-vars",
+        "ban-untagged-todo",
+        "no-empty-interface",
+        "no-slow-types",
+        "no-deprecated-deno-api",
+        "no-duplicate-case",
+        "no-dupe-class-members",
+        "camelcase",
+        "no-dupe-args",
+        "no-sloppy-imports",
+        "no-class-assign",
+        "no-unsafe-finally",
+        "verbatim-module-syntax"
+      ],
+      "exclude": [
+        "no-explicit-any",
+        "ban-ts-comment",
+        "jsx-no-children-prop",
+        "jsx-boolean-value",
+        "ban-types",
+        "jsx-curly-braces"
+      ]
+    },
+    "exclude": [
+      "**/test/**/*",
+      "**/*.test.ts",
+      "**/*.test.tsx",
+      "**/*.test.jsx",
+      "**/*.test.js",
+      "**/*.spec.ts",
+      "**/*.spec.tsx",
+      "**/*.spec.jsx",
+      "**/*.spec.js",
+      "**/*_test.ts",
+      "**/*_test.tsx",
+      "**/*_test.jsx",
+      "**/*_test.js"
+    ]
+  },
+  "imports": {
+    "@inspatial/kit": "../../../inspatial-kit/modules/in-runtime/src/jsx-runtime.ts",
+    "@inspatial/kit/jsx-runtime": "../../../inspatial-kit/modules/in-runtime/src/jsx-runtime.ts",
+    "@inspatial/kit/jsx-dev-runtime": "../../../inspatial-kit/modules/in-runtime/src/jsx-dev-runtime.ts",
+    "@inspatial/kit/components": "../../../inspatial-kit/modules/in-widget/src/index.ts",
+    "@inspatial/kit/inmoji": "../../../inspatial-kit/modules/in-widget/src/inmoji/index.ts",
+    "@inspatial/kit/inmoji/": "../../../inspatial-kit/modules/in-widget/src/inmoji/",
+    "@inspatial/kit/control-flow": "../../../inspatial-kit/modules/in-widget/src/control-flow/index.ts",
+    "@inspatial/kit/component": "../../../inspatial-kit/modules/in-widget/src/component/index.ts",
+    "@inspatial/kit/navigation": "../../../inspatial-kit/modules/in-widget/src/navigation/index.ts",
+    "@inspatial/kit/shape": "../../../inspatial-kit/modules/in-widget/src/shape/index.ts",
+    "@inspatial/kit/shape/": "../../../inspatial-kit/modules/in-widget/src/shape/",
+    "@inspatial/kit/light": "../../../inspatial-kit/modules/in-widget/src/light/index.ts",
+    "@inspatial/kit/light/": "../../../inspatial-kit/modules/in-widget/src/light/",
+    "@inspatial/kit/vfx": "../../../inspatial-kit/modules/in-widget/src/vfx/index.ts",
+    "@inspatial/kit/vfx/": "../../../inspatial-kit/modules/in-widget/src/vfx/",
+    "@inspatial/kit/structure": "../../../inspatial-kit/modules/in-widget/src/structure/index.ts",
+    "@inspatial/kit/structure/": "../../../inspatial-kit/modules/in-widget/src/structure/",
+    "@inspatial/kit/typography": "../../../inspatial-kit/modules/in-widget/src/typography/index.ts",
+    "@inspatial/kit/icon": "../../../inspatial-kit/modules/in-widget/src/icon/index.ts",
+    "@inspatial/kit/ornament": "../../../inspatial-kit/modules/in-widget/src/ornament/index.ts",
+    "@inspatial/kit/media": "../../../inspatial-kit/modules/in-widget/src/media/index.ts",
+    "@inspatial/kit/input": "../../../inspatial-kit/modules/in-widget/src/input/index.ts",
+    "@inspatial/kit/theme": "../../../inspatial-kit/modules/in-style/src/theme/index.ts",
+    "@inspatial/kit/theme/": "../../../inspatial-kit/modules/in-style/src/theme/",
+    "@inspatial/kit/presentation": "../../../inspatial-kit/modules/in-widget/src/presentation/index.ts",
+    "@inspatial/kit/data-flow": "../../../inspatial-kit/modules/in-widget/src/data-flow/index.ts",
+    "@inspatial/kit/data-flow/": "../../../inspatial-kit/modules/in-widget/src/data-flow/",
+    "@inspatial/kit/performance": "../../../inspatial-kit/modules/in-widget/src/performance/index.ts",
+    "@inspatial/kit/performance/": "../../../inspatial-kit/modules/in-widget/src/performance/",
+    "@inspatial/kit/recursive": "../../../inspatial-kit/modules/in-widget/src/recursive/index.ts",
+    "@inspatial/kit/block": "../../../inspatial-kit/modules/in-widget/src/block/index.ts",
+    "@inspatial/kit/block/incloud-status": "../../../inspatial-kit/modules/in-widget/src/block/incloud-status/index.ts",
+    "@inspatial/kit/os": "../../../inspatial-kit/modules/in-widget/src/os/index.ts",
+    "@inspatial/kit/template": "../../../inspatial-kit/modules/in-widget/src/template/index.ts",
+    "@inspatial/kit/realtime": "../../../inspatial-kit/modules/in-widget/src/realtime/index.ts",
+    "@inspatial/kit/realtime/": "../../../inspatial-kit/modules/in-widget/src/realtime/",
+    "@inspatial/kit/camera": "../../../inspatial-kit/modules/in-widget/src/camera/index.ts",
+    "@inspatial/kit/camera/": "../../../inspatial-kit/modules/in-widget/src/camera/",
+    "@inspatial/kit/gpu": "../../../inspatial-kit/modules/in-widget/src/gpu/index.ts",
+    "@inspatial/kit/gpu/": "../../../inspatial-kit/modules/in-widget/src/gpu/",
+    "@inspatial/kit/environment": "../../../inspatial-kit/modules/in-widget/src/environment/index.ts",
+    "@inspatial/kit/gizmo": "../../../inspatial-kit/modules/in-widget/src/gizmo/index.ts",
+    "@inspatial/kit/physics": "../../../inspatial-kit/modules/in-widget/src/physics/index.ts",
+    "@inspatial/kit/control": "../../../inspatial-kit/modules/in-widget/src/control/index.ts",
+    "@inspatial/kit/in-gpu": "../../../inspatial-kit/modules/in-renderer/src/in-gpu/index.ts",
+    "@inspatial/kit/extension": "../../../inspatial-kit/modules/in-teract/src/extension/index.ts",
+    "@inspatial/kit/runtime": "../../../inspatial-kit/modules/in-runtime/src/index.ts",
+    "@inspatial/kit/renderer": "../../../inspatial-kit/modules/in-renderer/src/in-renderer/index.ts",
+    "@inspatial/kit/signal": "../../../inspatial-kit/modules/in-teract/src/signal/index.ts",
+    "@inspatial/kit/state": "../../../inspatial-kit/modules/in-teract/src/state/index.ts",
+    "@inspatial/kit/trigger": "../../../inspatial-kit/modules/in-teract/src/trigger/index.ts",
+    "@inspatial/kit/motion": "../../../inspatial-kit/modules/in-motion/src/index.ts",
+    "@inspatial/kit/motion/": "../../../inspatial-kit/modules/in-motion/src/",
+    "@inspatial/kit/type": "../../../inspatial-kit/modules/in-type/src/index.ts",
+    "@inspatial/kit/type/": "../../../inspatial-kit/modules/in-type/src/",
+    "@inspatial/kit/style": "../../../inspatial-kit/modules/in-style/src/index.ts",
+    "@inspatial/kit/route": "../../../inspatial-kit/modules/in-route/src/index.ts",
+    "@inspatial/kit/route/": "../../../inspatial-kit/modules/in-route/src/",
+    "@inspatial/kit/build": "../../../inspatial-kit/modules/in-build/src/index.ts",
+    "@inspatial/kit/vader": "../../../inspatial-kit/modules/in-vader/src/index.ts",
+    "@inspatial/kit/vader/env": "../../../inspatial-kit/modules/in-vader/src/env/index.ts",
+    "@in/vader/is-primitive": "../../../inspatial-kit/modules/in-vader/src/is-primitive.ts",
+    "@in/vader/is-thenable": "../../../inspatial-kit/modules/in-vader/src/is-thenable.ts",
+    "@in/vader/nop": "../../../inspatial-kit/modules/in-vader/src/nop.ts",
+    "@in/vader/debug": "../../../inspatial-kit/modules/in-vader/src/debug/index.ts",
+    "@inspatial/kit/cloud": "../../../inspatial-kit/modules/in-cloud/src/index.ts",
+    "@inspatial/kit/cloud/": "../../../inspatial-kit/modules/in-cloud/src/",
+    "@inspatial/kit/widget/": "../../../inspatial-kit/modules/in-widget/src/",
+    "@inspatial/kit/widget/data-flow": "../../../inspatial-kit/modules/in-widget/src/data-flow/index.ts",
+    "@inspatial/kit/test": "../../../inspatial-kit/modules/in-test/src/index.ts",
+    "@inspatial/kit/test/": "../../../inspatial-kit/modules/in-test/src/"
+  }
+}
