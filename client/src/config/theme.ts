@@ -10,7 +10,7 @@ export const theme = createTheme({
   root: {
     /*===================== Brand Color ======================*/
     // Update this value to use your brand's main color.
-    "--brand": "hsla(274, 100%, 50%, 1)",
+    "--brand": "hsla(190, 96%, 44%, 1)",
 
     /*=================== Light Mode Colors ====================*/
     // Tweak these values to match your light mode design.

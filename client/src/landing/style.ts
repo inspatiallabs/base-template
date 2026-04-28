@@ -110,4 +110,23 @@ export const LandingStyle = {
       },
     ],
   }),
+
+  /*===================== Link ======================*/
+
+  link: createStyle({
+    name: "landing-link",
+    base: [
+      {
+        web: {
+          display: "flex",
+          margin: "auto",
+          justifyContent: "center",
+          alignItems: "center",
+          fontSize: "18px",
+          fontFamily: "poppins",
+          color: "brand",
+        },
+      },
+    ],
+  }),
 };

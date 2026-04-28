@@ -157,8 +157,8 @@
   "nodeModulesDir": "auto",
   "tasks": {
     "dev": "deno run --allow-net --allow-read --allow-write --allow-env --allow-run src/config/render.ts",
-    "tunnel": "deno run --allow-run --allow-read @in/build/inspatial-serve/tunnel --allow-net --allow-read --allow-write --allow-env --allow-run src/config/render.ts",
-    "build": "deno task dev -- --build",
+    "tunnel": "deno run --allow-run --allow-net --allow-read --allow-write --allow-env src/config/render.ts --inspatial-tunnel",
+    "build": "deno task dev -- --inspatial-build",
     "serve": "deno task dev",
     "kit:lighthouse": "deno run -A .inspatial/scripts/lighthouse.ts",
     "routes": "deno run -A .inspatial/scripts/route.ts",
@@ -297,5 +297,9 @@
     "@inspatial/kit/widget/data-flow": "../../../inspatial-kit/modules/in-widget/src/data-flow/index.ts",
     "@inspatial/kit/test": "../../../inspatial-kit/modules/in-test/src/index.ts",
     "@inspatial/kit/test/": "../../../inspatial-kit/modules/in-test/src/"
+  },
+  "deploy": {
+    "org": "beamlabs",
+    "app": "bioloon"
   }
 }

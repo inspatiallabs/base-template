@@ -8,10 +8,11 @@ import type { LandingProps } from "./type.ts";
 export function LandingWindow(props: LandingProps) {
   /**************************** (Props) ****************************/
 
-  const { className, class: cls, ...rest } = props;
-  const logoProps = props.children?.logo ?? {};
-  const titleProps = props.children?.title ?? {};
-  const descriptionProps = props.children?.description ?? {};
+  const { className, class: cls, children, ...rest } = props;
+  const logoProps = children?.logo ?? {};
+  const titleProps = children?.title ?? {};
+  const descriptionProps = children?.description ?? {};
+  const linkProps = children?.link ?? {};
 
   /*************************** (Render) ***************************/
   return (
@@ -43,12 +44,30 @@ export function LandingWindow(props: LandingProps) {
               },
             },
             {
-              is: "typography/text",
+              is: "structure/stack/y-stack",
               children: {
-                variant: "paragraph",
-                label: "For press & media please contact",
-                className: LandingStyle.description.getStyle(descriptionProps),
-                ...descriptionProps,
+                space: "2",
+                children: [
+                  {
+                    is: "typography/text",
+                    children: {
+                      variant: "paragraph",
+                      label: "For press & media please contact",
+                      className:
+                        LandingStyle.description.getStyle(descriptionProps),
+                      ...descriptionProps,
+                    },
+                  },
+                  {
+                    is: "navigation/link",
+                    children: {
+                      to: "mailto:hello@bioloon.com",
+                      label: "hello@bioloon.com",
+                      className: LandingStyle.link.getStyle(linkProps),
+                      ...linkProps,
+                    },
+                  },
+                ],
               },
             },
           ]}
