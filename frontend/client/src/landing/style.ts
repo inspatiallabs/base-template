@@ -41,22 +41,9 @@ export const LandingStyle = {
         ],
         // Add more formats here...
       },
-      //   ...WidgetThemeProp.get(),
     },
     defaultSettings: {
       format: "hero",
-      //   radius: "none",
-      //   size: undefined,
-      //   padding: undefined,
-      //   margin: undefined,
-      //   space: undefined,
-      //   effect: "none",
-      //   material: "flat",
-      //   color: "none",
-      //   background: "",
-      //   cursor: "auto",
-      //   axis: "x",
-      //   disabled: false,
     },
   }),
 
@@ -66,16 +53,47 @@ export const LandingStyle = {
     base: [
       {
         web: {
-          display: "flex",
-          justifyItems: "center",
-          alignItems: "center",
-          fontSize: "3rem",
+          display: "block",
+          height: "auto",
+          objectFit: "contain",
+          "@media (min-width: 640px)": {
+            width: "220px",
+          },
+          "@media (min-width: 768px)": {
+            width: "280px",
+          },
+          "@media (min-width: 1024px)": {
+            width: "400px",
+          },
+          "@media (min-width: 1280px)": {
+            width: "460px",
+          },
+          "@media (min-width: 1536px)": {
+            width: "520px",
+          },
+          "@media (max-width: 1536px)": {
+            width: "460px",
+          },
+          "@media (max-width: 1280px)": {
+            width: "400px",
+          },
+          "@media (max-width: 1024px)": {
+            width: "320px",
+          },
+          "@media (max-width: 768px)": {
+            width: "240px",
+          },
+          "@media (max-width: 640px)": {
+            width: "168px",
+          },
         },
         ios: {
-          fontSize: "20px",
+          width: "168px",
+          maxWidth: "38vw",
         },
         android: {
-          fontSize: "20px",
+          width: "168px",
+          maxWidth: "38vw",
         },
       },
     ],
@@ -90,11 +108,13 @@ export const LandingStyle = {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          fontSize: "52px",
           fontFamily: "poppins",
           letterSpacing: "14px",
           width: "100%",
           color: "white",
+          "@media (min-width: 640px)": {
+            fontSize: "24px",
+          }
         },
       },
     ],
@@ -130,9 +150,10 @@ export const LandingStyle = {
           margin: "auto",
           justifyContent: "center",
           alignItems: "center",
-          fontSize: "18px",
+          fontSize: "24px",
           fontFamily: "poppins",
-          color: "brand",
+          color: "#04bade",
+          textDecoration: "unset",
         },
       },
     ],

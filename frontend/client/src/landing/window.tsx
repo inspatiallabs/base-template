@@ -31,8 +31,8 @@ export function LandingWindow(props: LandingProps) {
               children: {
                 src: "./asset/logo.png",
                 alt: "Bioloon",
-                className: LandingStyle.logo.getStyle(logoProps),
                 ...logoProps,
+                className: LandingStyle.logo.getStyle(logoProps),
               },
             },
             {
@@ -40,8 +40,8 @@ export function LandingWindow(props: LandingProps) {
               children: {
                 variant: "paragraph",
                 label: "COMING SOON...",
-                className: LandingStyle.title.getStyle(titleProps),
                 ...titleProps,
+                className: LandingStyle.title.getStyle(titleProps),
               },
             },
             {
@@ -54,9 +54,9 @@ export function LandingWindow(props: LandingProps) {
                     children: {
                       variant: "paragraph",
                       label: "For press & media please contact",
+                      ...descriptionProps,
                       className:
                         LandingStyle.description.getStyle(descriptionProps),
-                      ...descriptionProps,
                     },
                   },
                   {
@@ -64,8 +64,8 @@ export function LandingWindow(props: LandingProps) {
                     children: {
                       to: "mailto:hello@bioloon.com",
                       label: "hello@bioloon.com",
-                      className: LandingStyle.link.getStyle(linkProps),
                       ...linkProps,
+                      className: LandingStyle.link.getStyle(linkProps),
                     },
                   },
                 ],
