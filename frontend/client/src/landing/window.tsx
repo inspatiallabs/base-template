@@ -24,6 +24,7 @@ export function LandingWindow(props: LandingProps) {
           className={iss(
             LandingStyle.root.getStyle({ className, class: cls, ...rest }),
           )}
+          {...rest}
           children={[
             {
               is: "media/image",

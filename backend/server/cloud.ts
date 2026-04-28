@@ -1,4 +1,4 @@
-import "../inspatial-cloud/cloud.ts";
+import "../../../../inspatial-cloud/cloud.ts";
 
 createInCloud("bioloon", [
   // Add extensions here
