@@ -1,11 +1,6 @@
 {
-  "workspace": [
-    "./client",
-    "./server",
-    "./admin"
-  ],
+  "workspace": ["./client"],
   "tasks": {
-    "dev": "cd server && deno task dev",
     "dev:client": "cd client && deno task dev",
     "build": "cd client && deno task build"
   },
@@ -161,4 +156,3 @@
     "app": "bioloon"
   }
 }
-

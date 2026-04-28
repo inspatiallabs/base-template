@@ -1,0 +1,6 @@
+{
+  "tasks": {
+    "dev": "deno run -A --watch --env cloud.ts",
+    "build": "deno compile -A --unstable-net --unstable-raw-imports --target x86_64-unknown-linux-gnu --include ../inspatial-cloud/src/files/image-ops/resize-worker.ts -o ./bioloon cloud.ts"
+  }
+}
