@@ -9,7 +9,7 @@
 </p>
    </a>
 
-   <br>
+<br>
    <br>
 
 <p align="center">
@@ -24,7 +24,7 @@
 
 _Reality is your canvas_
 
-  <h3 align="center">
+<h3 align="center">
     InSpatial is a universal development environment (UDE) <br> for building cross-platform and spatial (AR/MR/VR) applications
   </h3>
 
@@ -42,7 +42,7 @@ _Reality is your canvas_
 
 </div>
 
-##
+## 
 
 <div align="center">
 

@@ -55,8 +55,9 @@ export function LandingWindow(props: LandingProps) {
                       variant: "paragraph",
                       label: "For press & media please contact",
                       ...descriptionProps,
-                      className:
-                        LandingStyle.description.getStyle(descriptionProps),
+                      className: LandingStyle.description.getStyle(
+                        descriptionProps,
+                      ),
                     },
                   },
                   {

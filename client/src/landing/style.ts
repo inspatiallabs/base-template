@@ -114,7 +114,7 @@ export const LandingStyle = {
           color: "white",
           "@media (min-width: 640px)": {
             fontSize: "24px",
-          }
+          },
         },
       },
     ],

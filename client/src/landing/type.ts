@@ -12,30 +12,35 @@ type LandingWidgetOverrideProps<T> = Partial<
 
 /*################################(LANDING ROOTS PROPS)################################*/
 
-export type LandingRootProps = StyleProps<typeof LandingStyle.root> &
-  Omit<WidgetTreeProps<"window">, "children" | "for" | "is">;
+export type LandingRootProps =
+  & StyleProps<typeof LandingStyle.root>
+  & Omit<WidgetTreeProps<"window">, "children" | "for" | "is">;
 
 /*################################(LANDING LOGO PROPS)################################*/
 
-export type LandingLogoProps = StyleProps<typeof LandingStyle.logo> &
-  LandingWidgetOverrideProps<ImageProps>;
+export type LandingLogoProps =
+  & StyleProps<typeof LandingStyle.logo>
+  & LandingWidgetOverrideProps<ImageProps>;
 
 /*################################(LANDING TITLE PROPS)################################*/
 
-export type LandingTitleProps = StyleProps<typeof LandingStyle.title> &
-  LandingWidgetOverrideProps<TypographyProps>;
+export type LandingTitleProps =
+  & StyleProps<typeof LandingStyle.title>
+  & LandingWidgetOverrideProps<TypographyProps>;
 
 /*################################(LANDING DESCRIPTION PROPS)################################*/
 
-export type LandingDescriptionProps = StyleProps<
-  typeof LandingStyle.description
-> &
-  LandingWidgetOverrideProps<TypographyProps>;
+export type LandingDescriptionProps =
+  & StyleProps<
+    typeof LandingStyle.description
+  >
+  & LandingWidgetOverrideProps<TypographyProps>;
 
 /*################################(LANDING LINK PROPS)################################*/
 
-export type LandingLinkProps = StyleProps<typeof LandingStyle.link> &
-  LandingWidgetOverrideProps<LinkProps>;
+export type LandingLinkProps =
+  & StyleProps<typeof LandingStyle.link>
+  & LandingWidgetOverrideProps<LinkProps>;
 
 /*################################(LANDING PROPS)################################*/
 
