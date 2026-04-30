@@ -63,7 +63,7 @@ _Reality is your canvas_
         </a>
       </td>
       <td align="center">AI toolkit for building multi-agent systems</td>
-      <td align="center"><a href="https://www.inspatial.dev">inspatial.ai</a></td>
+      <td align="center"><a href="https://www.inspatial.ai">inspatial.ai</a></td>
     </tr>
     <tr>
       <td align="center">
