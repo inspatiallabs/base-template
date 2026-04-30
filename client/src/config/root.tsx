@@ -6,10 +6,9 @@ import { InCloudStatus, NTA } from "@inspatial/kit/block";
 export function Root() {
   return (
     <>
-      <Dynamic chain={route.chain}  />
-      <InCloudStatus />
-      <NTA />
+      <Dynamic chain={route.chain} />
+      <InCloudStatus display={false} />
+      <NTA display={false} />
     </>
   );
 }
-

@@ -2,9 +2,9 @@
     <a href="https://inspatial.io" target="_blank">
     <p align="center">
     <picture>
-    <source media="(prefers-color-scheme: light)" srcset="https://inspatial-storage.s3.eu-west-2.amazonaws.com/media/kit-hex-icon.svg">
-      <source media="(prefers-color-scheme: dark)" srcset="https://inspatial-storage.s3.eu-west-2.amazonaws.com/media/kit-hex-icon.svg">
-        <img src="https://inspatial-storage.s3.eu-west-2.amazonaws.com/media/kit-hex-icon.svg" alt="InSpatial" width="300">
+    <source media="(prefers-color-scheme: light)" srcset="https://inspatial-storage.s3.eu-west-2.amazonaws.com/media/cloud-hex-icon.svg">
+      <source media="(prefers-color-scheme: dark)" srcset="https://inspatial-storage.s3.eu-west-2.amazonaws.com/media/cloud-hex-icon.svg">
+        <img src="https://inspatial-storage.s3.eu-west-2.amazonaws.com/media/cloud-hex-icon.svg" alt="InSpatial" width="300">
     </picture>
 </p>
    </a>
