@@ -90,7 +90,7 @@ _Reality is your canvas_
         </a>
       </td>
       <td align="center">Build and manage your InSpatial apps</td>
-      <td align="center"><a href="https://www.inspatial.io">inspatial.app</a></td>
+      <td align="center"><a href="https://www.inspatial.app">inspatial.app</a></td>
     </tr>
     <tr>
       <td align="center">
@@ -103,8 +103,8 @@ _Reality is your canvas_
     </tr>
     <tr>
       <td align="center">
-        <a href="https://www.inspatial.store">
-          <img src="https://inspatial-storage.s3.eu-west-2.amazonaws.com/media/run-badge.svg" alt="InSpatial Store">
+        <a href="https://www.inspatial.run">
+          <img src="https://inspatial-storage.s3.eu-west-2.amazonaws.com/media/run-badge.svg" alt="InSpatial Run">
         </a>
       </td>
       <td align="center">CLI for building with InSpatial</td>
