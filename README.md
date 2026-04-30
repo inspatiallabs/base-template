@@ -16,9 +16,9 @@
 <p align="center">
   <a href="https://inspatial.io" target="_blank">
     <picture>
-        <source media="(prefers-color-scheme: light)" srcset="https://inspatial-storage.s3.eu-west-2.amazonaws.com/media/logo-dark.svg">
-        <source media="(prefers-color-scheme: dark)" srcset="https://inspatial-storage.s3.eu-west-2.amazonaws.com/media/logo-light.svg">
-        <img src="https://inspatial-storage.s3.eu-west-2.amazonaws.com/media/logo-dark.svg" height="75" alt="InSpatial">
+        <source media="(prefers-color-scheme: light)" srcset="https://inspatial-storage.s3.eu-west-2.amazonaws.com/media/inspatial-logo-dark.svg">
+        <source media="(prefers-color-scheme: dark)" srcset="https://inspatial-storage.s3.eu-west-2.amazonaws.com/media/inspatial-logo-light.svg">
+        <img src="https://inspatial-storage.s3.eu-west-2.amazonaws.com/media/inspatial-logo-dark.svg" height="75" alt="InSpatial">
     </picture>
     </a>
 </p>
