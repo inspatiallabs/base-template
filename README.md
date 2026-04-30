@@ -3,9 +3,9 @@
     <a href="https://inspatial.io" target="_blank">
     <p align="center">
     <picture>
-    <source media="(prefers-color-scheme: light)" srcset="https://inspatial-storage.s3.eu-west-2.amazonaws.com/media/icon-brutal-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://inspatial-storage.s3.eu-west-2.amazonaws.com/media/io-hex-icon.svg">
       <source media="(prefers-color-scheme: dark)" srcset="https://inspatial-storage.s3.eu-west-2.amazonaws.com/media/icon-brutal-light.svg">
-        <img src="https://inspatial-storage.s3.eu-west-2.amazonaws.com/media/icon-brutal-dark.svg" alt="InSpatial" width="300">
+        <img src="https://inspatial-storage.s3.eu-west-2.amazonaws.com/media/io-hex-icon.svg" alt="InSpatial" width="300">
     </picture>
 </p>
    </a>
