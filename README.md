@@ -32,7 +32,7 @@ _Reality is your canvas_
 [![InSpatial Kit](https://inspatial-storage.s3.eu-west-2.amazonaws.com/media/ai-badge.svg)](https://www.inspatial.ai)
 [![InSpatial Kit](https://inspatial-storage.s3.eu-west-2.amazonaws.com/media/kit-badge.svg)](https://www.inspatial.dev)
 [![InSpatial Cloud](https://inspatial-storage.s3.eu-west-2.amazonaws.com/media/cloud-badge.svg)](https://www.inspatial.cloud)
-[![InSpatial App](https://inspatial-storage.s3.eu-west-2.amazonaws.com/media/app-badge.svg)](https://www.inspatial.io)
+[![InSpatial App](https://inspatial-storage.s3.eu-west-2.amazonaws.com/media/app-badge.svg)](https://www.inspatial.app)
 [![InSpatial Store](https://inspatial-storage.s3.eu-west-2.amazonaws.com/media/store-badge.svg)](https://www.inspatial.store)
 [![InSpatial Store](https://inspatial-storage.s3.eu-west-2.amazonaws.com/media/run-badge.svg)](https://www.inspatial.run)
 
