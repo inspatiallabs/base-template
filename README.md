@@ -85,7 +85,7 @@ _Reality is your canvas_
     </tr>
     <tr>
       <td align="center">
-        <a href="https://www.inspatial.io">
+        <a href="https://www.inspatial.app">
           <img src="https://inspatial-storage.s3.eu-west-2.amazonaws.com/media/app-badge.svg" alt="InSpatial App">
         </a>
       </td>
