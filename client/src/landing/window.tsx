@@ -1,5 +1,5 @@
 import { ErrorBoundary } from "@inspatial/kit/control-flow";
-import { Widget } from "@inspatial/kit/widget";
+import { Widget } from "@inspatial/kit/recursive";
 import { iss } from "@inspatial/kit/style";
 import { LandingStyle } from "./style.ts";
 import type { LandingProps } from "./type.ts";
