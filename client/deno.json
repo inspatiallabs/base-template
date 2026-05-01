@@ -155,8 +155,8 @@
     }
   },
   "tasks": {
-    "dev": "deno run --allow-net --allow-read --allow-write --allow-env --allow-run src/config/render.ts",
-    "tunnel": "deno run --allow-run --allow-net --allow-read --allow-write --allow-env src/config/render.ts --inspatial-tunnel",
+    "dev": "deno run --unstable-bundle --allow-net --allow-read --allow-write --allow-env --allow-run src/config/render.ts",
+    "tunnel": "deno run --unstable-bundle --allow-run --allow-net --allow-read --allow-write --allow-env src/config/render.ts --inspatial-tunnel",
     "build": "deno task dev --inspatial-build",
     "serve": "deno task dev",
     "kit:lighthouse": "deno run -A .inspatial/scripts/lighthouse.ts",
