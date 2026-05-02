@@ -31,7 +31,7 @@ export const LandingStyle = {
         hero: [
           {
             web: {
-              backgroundImage: "url('./asset/hero.jpg')",
+              backgroundImage: "/asset/hero.jpg",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
               backgroundSize: "cover",

@@ -118,6 +118,9 @@
           "preconnectOrigins": [],
           "preloadRouteChunks": false
         },
+        "widgetTreeShake": {
+          "allowFor": []
+        },
         "timing": {
           "debounceMs": 100,
           "waitAttempts": 50,

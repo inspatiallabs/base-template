@@ -29,7 +29,7 @@ export function LandingWindow(props: LandingProps) {
             {
               is: "media/image",
               children: {
-                src: "./asset/logo.png",
+                src: "/asset/logo.png",
                 alt: "Bioloon",
                 ...logoProps,
                 className: LandingStyle.logo.getStyle(logoProps),
@@ -55,9 +55,8 @@ export function LandingWindow(props: LandingProps) {
                       variant: "paragraph",
                       label: "For press & media please contact",
                       ...descriptionProps,
-                      className: LandingStyle.description.getStyle(
-                        descriptionProps,
-                      ),
+                      className:
+                        LandingStyle.description.getStyle(descriptionProps),
                     },
                   },
                   {
