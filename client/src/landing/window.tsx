@@ -26,51 +26,141 @@ export function LandingWindow(props: LandingProps) {
           )}
           {...rest}
           children={[
+            /*============================== (Hero View) ============================== */
             {
-              is: "media/image",
+              is: "structure/view",
               children: {
-                src: "/asset/logo.png",
-                alt: "Bioloon",
-                ...logoProps,
-                className: LandingStyle.logo.getStyle(logoProps),
-              },
-            },
-            {
-              is: "typography/text",
-              children: {
-                variant: "paragraph",
-                label: "COMING SOON...",
-                ...titleProps,
-                className: LandingStyle.title.getStyle(titleProps),
-              },
-            },
-            {
-              is: "structure/stack/y-stack",
-              children: {
-                space: "2",
+                style: {
+                  web: {
+                    minHeight: "100vh",
+                    width: "100%",
+                  },
+                },
                 children: [
                   {
-                    is: "typography/text",
+                    is: "structure/stack/y-stack",
                     children: {
-                      variant: "paragraph",
-                      label: "For press & media please contact",
-                      ...descriptionProps,
-                      className:
-                        LandingStyle.description.getStyle(descriptionProps),
-                    },
-                  },
-                  {
-                    is: "navigation/link",
-                    children: {
-                      to: "mailto:hello@bioloon.com",
-                      label: "hello@bioloon.com",
-                      ...linkProps,
-                      className: LandingStyle.link.getStyle(linkProps),
+                      space: "2",
+                      style: {
+                        web: {
+                          minHeight: "100vh",
+                          width: "100%",
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "center",
+                          justifyContent: "center",
+                        },
+                      },
+                      children: [
+                        {
+                          is: "media/image",
+                          children: {
+                            src: "/asset/logo.png",
+                            alt: "Bioloon",
+                            ...logoProps,
+                            className: LandingStyle.logo.getStyle(logoProps),
+                          },
+                        },
+                        {
+                          is: "typography/text",
+                          children: {
+                            variant: "paragraph",
+                            label: "COMING SOON...",
+                            ...titleProps,
+                            className: LandingStyle.title.getStyle(titleProps),
+                          },
+                        },
+                        {
+                          is: "structure/stack/y-stack",
+                          children: {
+                            space: "0",
+                            children: [
+                              {
+                                is: "typography/text",
+                                children: {
+                                  variant: "paragraph",
+                                  label: "For press & media please contact",
+                                  ...descriptionProps,
+                                  className:
+                                    LandingStyle.description.getStyle(
+                                      descriptionProps,
+                                    ),
+                                },
+                              },
+                              {
+                                is: "navigation/link",
+                                children: {
+                                  to: "mailto:hello@bioloon.com",
+                                  label: "hello@bioloon.com",
+                                  ...linkProps,
+                                  className:
+                                    LandingStyle.link.getStyle(linkProps),
+                                },
+                              },
+                            ],
+                          },
+                        },
+                      ],
                     },
                   },
                 ],
               },
             },
+            /*============================== (Add New View) ============================== */
+            // {
+            //   is: "structure/view",
+            //   children: {
+            //     background: "green",
+            //     style: {
+            //       web: {
+            //         minHeight: "100vh",
+            //         width: "100%",
+            //       },
+            //     },
+            //     children: [
+            //       {
+            //         is: "structure/stack/y-stack",
+            //         children: {
+            //           space: "2",
+            //           style: {
+            //             web: {
+            //               minHeight: "100vh",
+            //               width: "100%",
+            //               display: "flex",
+            //               flexDirection: "column",
+            //               alignItems: "center",
+            //               justifyContent: "center",
+            //             },
+            //           },
+            //           children: [
+            //             {
+            //               is: "typography/text",
+            //               children: {
+            //                 variant: "paragraph",
+            //                 label: "For press & media please contact",
+            //                 ...descriptionProps,
+            //                 className:
+            //                   LandingStyle.description.getStyle(
+            //                     descriptionProps,
+            //                   ),
+            //               },
+            //             },
+            //             {
+            //               is: "navigation/link",
+            //               children: {
+            //                 to: "mailto:hello@bioloon.com",
+            //                 label: "hello@bioloon.com",
+            //                 ...linkProps,
+            //                 className: LandingStyle.link.getStyle(linkProps),
+            //               },
+            //             },
+            //           ],
+            //         },
+            //       },
+            //     ],
+            //   },
+            // },
+           
           ]}
         />
       </ErrorBoundary>
