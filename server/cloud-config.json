@@ -3,14 +3,20 @@
   "core": {
     "CLOUD_MODE": "development",
     "LOG_LEVEL": "info",
-    "BROKER_PORT": 11254,
-    "QUEUE_PORT": 11354,
+    "BROKER_PORT": 11255,
+    "QUEUE_PORT": 11355,
     "SERVE_HOSTNAME": "localhost",
     "PUBLIC_ROOT": "./public",
     "SINGLE_PAGE_APP": false,
     "SPA_ROOT_PATHS": [],
     "CACHE_STATIC": false,
-    "SERVE_PORT": 8000,
+    "SERVE_PORT": 8003,
+    "DB_HOST": "127.0.0.1",
+    "DB_PORT": 5433,
+    "DB_USER": "postgres",
+    "DB_CONNECTION_TYPE": "tcp",
+    "DB_PASSWORD": "postgres",
+    "DB_NAME": "bioloon",
     "ALLOWED_ORIGINS": [
       "*"
     ],
