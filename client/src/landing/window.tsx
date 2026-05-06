@@ -3,6 +3,8 @@ import { Widget } from "@inspatial/kit/recursive";
 import { iss } from "@inspatial/kit/style";
 import { LandingStyle } from "./style.ts";
 import type { LandingProps } from "./type.ts";
+import { getHeroSectionAPI } from "./action.ts";
+import { $ } from "@inspatial/kit/signal";
 
 /*################################(WINDOW)################################*/
 export function LandingWindow(props: LandingProps) {
@@ -21,6 +23,7 @@ export function LandingWindow(props: LandingProps) {
         <Widget
           is="widget-tree"
           for="window"
+          on:mount={() => getHeroSectionAPI.run()}
           className={iss(
             LandingStyle.root.getStyle({ className, class: cls, ...rest }),
           )}
@@ -65,7 +68,7 @@ export function LandingWindow(props: LandingProps) {
                           is: "typography/text",
                           children: {
                             variant: "paragraph",
-                            label: "COMING SOON...",
+                            label: $(() => getHeroSectionAPI.data.get()?.title),
                             ...titleProps,
                             className: LandingStyle.title.getStyle(titleProps),
                           },
@@ -160,7 +163,6 @@ export function LandingWindow(props: LandingProps) {
             //     ],
             //   },
             // },
-           
           ]}
         />
       </ErrorBoundary>

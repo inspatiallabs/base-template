@@ -24,7 +24,7 @@
     "AUTO_MIGRATE": true,
     "DROP_TABLES": false,
     "DEFAULT_CURRENCY": "GBP",
-    "EMBEDDED_DB": true,
+    "EMBEDDED_DB": false,
     "ORM_DEBUG_MODE": false,
     "EMBEDDED_DB_PORT": 11527,
     "name": "bioloon"

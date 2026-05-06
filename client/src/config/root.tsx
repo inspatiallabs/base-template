@@ -7,7 +7,7 @@ export function Root() {
   return (
     <>
       <Dynamic chain={route.chain} />
-      <InCloudStatus display={false} />
+      <InCloudStatus display={true} />
       <NTA display={false} />
     </>
   );

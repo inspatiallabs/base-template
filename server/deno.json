@@ -10,7 +10,7 @@
   },
   "tasks": {
     "build": "deno compile -A --unstable-net --unstable-raw-imports --include ../inspatial-cloud/src/files/image-ops/resize-worker.ts --include",
-    "dev": "deno run -A --unstable-net --unstable-raw-imports cloud.ts",
+    "dev": "deno run -A --unstable-net --unstable-raw-imports --env-file=../client/.env cloud.ts",
     "test": "deno test tests/ --allow-net --allow-env --allow-read --no-check"
   },
   "lint": {
