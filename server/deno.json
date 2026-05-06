@@ -1,6 +1,22 @@
 {
+  "compilerOptions": {
+    "verbatimModuleSyntax": true
+  },
+  "imports": {
+    "@in/telligence": "../inspatial-ai/in-telligence/src/index.ts",
+    "@in/telligence/": "../inspatial-ai/in-telligence/src/",
+    "@inspatial/cloud": "../../../inspatial-cloud/mod.ts",
+    "@inspatial/cloud/types": "../../inspatial-cloud/types.ts"
+  },
   "tasks": {
-    "dev": "deno run -A --watch --env cloud.ts",
-    "build": "deno compile -A --unstable-net --unstable-raw-imports --target x86_64-unknown-linux-gnu --include ../inspatial-cloud/src/files/image-ops/resize-worker.ts -o ./bioloon cloud.ts"
+    "build": "deno compile -A --unstable-net --unstable-raw-imports --include ../inspatial-cloud/src/files/image-ops/resize-worker.ts --include",
+    "dev": "deno run -A --unstable-net --unstable-raw-imports cloud.ts",
+    "test": "deno test tests/ --allow-net --allow-env --allow-read --no-check"
+  },
+  "lint": {
+    "rules": {
+      "include": ["verbatim-module-syntax"],
+      "exclude": ["no-explicit-any"]
+    }
   }
 }
