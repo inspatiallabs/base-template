@@ -1,3 +1,4 @@
+import { defineExtension } from "@inspatial/cloud";
 import { landingAPI } from "./landing/api.ts";
 import { sectionEntry } from "./landing/entry.ts";
 
@@ -8,7 +9,7 @@ export const bioloonExtension = defineExtension("bioloon", {
   entryTypes: [sectionEntry],
   apiGroups: [landingAPI],
   settingsTypes: [],
-  install(incloud) {
+  install(_incloud) {
     // Perform any setup needed when the extension is installed
   },
 });
