@@ -41,7 +41,8 @@
         "routeManifest": "./.inspatial/route/route-manifest.generated.ts",
         "routeViews": "./.inspatial/route/route-views.generated.ts",
         "routeTypes": "./.inspatial/route/route-types.generated.d.ts",
-        "assetManifest": "./.inspatial/asset/asset-manifest.generated.d.ts"
+        "assetManifest": "./.inspatial/asset/asset-manifest.generated.d.ts",
+        "cloudTypes": "./.inspatial/cloud/cloud.generated.d.ts"
       },
       "watch": {
         "include": [
@@ -87,7 +88,6 @@
           "excludeIndex": true
         }
       },
-      "workspace": "detached",
       "build": {
         "js": {
           "entrypoints": [],
@@ -158,8 +158,8 @@
     }
   },
   "tasks": {
-    "dev": "deno run --unstable-bundle --allow-net --allow-read --allow-write --allow-env --allow-run src/config/render.ts",
-    "tunnel": "deno run --unstable-bundle --allow-run --allow-net --allow-read --allow-write --allow-env src/config/render.ts --inspatial-tunnel",
+    "dev": "deno run --env-file=../server/.env --unstable-bundle --allow-net --allow-read --allow-write --allow-env --allow-run src/config/render.ts",
+    "tunnel": "deno run --env-file=../server/.env --unstable-bundle --allow-run --allow-net --allow-read --allow-write --allow-env src/config/render.ts --inspatial-tunnel",
     "build": "deno task dev --inspatial-build",
     "serve": "deno task dev",
     "kit:lighthouse": "deno run -A .inspatial/scripts/lighthouse.ts",
@@ -309,6 +309,7 @@
     "@in/type/": "../../../inspatial-kit/modules/in-type/src/",
     "@in/cloud": "../../../inspatial-kit/modules/in-cloud/src/index.ts",
     "@in/cloud/": "../../../inspatial-kit/modules/in-cloud/src/",
+    "@in/cloud/sync": "../../../inspatial-kit/modules/in-cloud/src/sync/index.ts",
     "@in/cloud/schema": "../../../inspatial-kit/modules/in-cloud/src/schema/index.ts",
     "@in/motion": "../../../inspatial-kit/modules/in-motion/src/index.ts",
     "@in/motion/": "../../../inspatial-kit/modules/in-motion/src/",

@@ -4,7 +4,6 @@ import { iss } from "@inspatial/kit/style";
 import { LandingStyle } from "./style.ts";
 import type { LandingProps } from "./type.ts";
 import { getSection } from "./action.ts";
-import { $ } from "@inspatial/kit/signal";
 
 /*################################(WINDOW)################################*/
 export function LandingWindow(props: LandingProps) {
@@ -33,10 +32,10 @@ export function LandingWindow(props: LandingProps) {
                 web: {
                   minHeight: "100vh",
                   width: "100%",
-                  backgroundImage: $(() => {
+                  backgroundImage: () => {
                     const url = getSection.data.get()?.backgroundImageUrl;
                     return url ? `url("${url}")` : "none";
-                  }),
+                  },
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
@@ -61,7 +60,7 @@ export function LandingWindow(props: LandingProps) {
                       {
                         is: "media/image",
                         children: {
-                          src: $(() => getSection.data.get()?.logoUrl ?? ""),
+                          src: () => getSection.data.get()?.logoUrl ?? "",
                           alt: "Bioloon",
                           ...logoProps,
                           className: LandingStyle.logo.getStyle(logoProps),
@@ -71,9 +70,7 @@ export function LandingWindow(props: LandingProps) {
                         is: "typography/text",
                         children: {
                           variant: "paragraph",
-                          label: $(() =>
-                            getSection.data.get()?.title ?? ""
-                          ),
+                          label: () => getSection.data.get()?.title ?? "",
                           ...titleProps,
                           className: LandingStyle.title.getStyle(titleProps),
                         },
@@ -87,9 +84,8 @@ export function LandingWindow(props: LandingProps) {
                               is: "typography/text",
                               children: {
                                 variant: "paragraph",
-                                label: $(() =>
-                                  getSection.data.get()?.description ?? ""
-                                ),
+                                label: () =>
+                                  getSection.data.get()?.description ?? "",
                                 ...descriptionProps,
                                 className:
                                   LandingStyle.description.getStyle(
@@ -100,13 +96,10 @@ export function LandingWindow(props: LandingProps) {
                             {
                               is: "navigation/link",
                               children: {
-                                to: $(() =>
-                                  getSection.data.get()?.link ?? "#"
-                                ),
-                                label: $(() =>
+                                to: () => getSection.data.get()?.link ?? "#",
+                                label: () =>
                                   getSection.data.get()?.linkLabel ??
-                                    getSection.data.get()?.link ?? ""
-                                ),
+                                    getSection.data.get()?.link ?? "",
                                 ...linkProps,
                                 className: LandingStyle.link.getStyle(
                                   linkProps,
