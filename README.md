@@ -116,15 +116,45 @@ _Reality is your canvas_
 
 ---
 
+### macOS / Linux
+
+```bash
+curl -fsSL inspati.ai | sh
+```
+
+<details>
+<summary>or</summary>
+
+```bash
+curl -fsSL inspatial.sh | sh
+```
+
+</details>
+
+### Windows (PowerShell)
+
+```bash
+irm inspati.ai/install.ps1 | iex
+```
+
+<details>
+<summary>or</summary>
+
+```bash
+irm inspatial.sh/install.ps1 | iex
+```
+
+---
+
 ### Getting Started
 
 Create a new InSpatial project, then run the UDE Cloud server and Kit client
 side by side.
 
-| Step | Target | Command |
-|:--|:--|:--|
-| 1 | Create your project | `inspatial create https://github.com/inspatiallabs/base-template` |
-| 2 | Run **InSpatial Cloud** UDE server | `cd server`<br>`inspatial run dev` |
-| 3 | Run **InSpatial Kit** UDE client | `cd client`<br>`inspatial run dev` |
+| Step | Target                             | Command                                                           |
+| :--- | :--------------------------------- | :---------------------------------------------------------------- |
+| 1    | Create your project                | `inspatial create https://github.com/inspatiallabs/base-template` |
+| 2    | Run **InSpatial Cloud** UDE server | `cd server`<br>`inspatial run dev`                                |
+| 3    | Run **InSpatial Kit** UDE client   | `cd client`<br>`inspatial run dev`                                |
 
 > Keep both terminals running while you build.
