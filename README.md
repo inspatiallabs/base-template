@@ -1,5 +1,4 @@
-
- <div align="center">
+<div align="center">
     <a href="https://inspatial.io" target="_blank">
     <p align="center">
     <picture>
@@ -10,7 +9,7 @@
 </p>
    </a>
 
-   <br>
+<br>
    <br>
 
 <p align="center">
@@ -25,7 +24,7 @@
 
 _Reality is your canvas_
 
-  <h3 align="center">
+<h3 align="center">
     InSpatial is a universal development environment (UDE) <br> for building cross-platform and spatial (AR/MR/VR) applications
   </h3>
 
@@ -43,7 +42,7 @@ _Reality is your canvas_
 
 </div>
 
-##
+## 
 
 <div align="center">
 
@@ -115,3 +114,38 @@ _Reality is your canvas_
 
 </p>
 
+---
+
+## Getting Started
+
+<div align="center">
+
+**Create a new InSpatial project, then run the UDE Cloud server and Kit client side by side.**
+
+</div>
+
+### 1. Create your project
+
+```bash
+inspatial create https://github.com/inspatiallabs/base-template
+```
+
+### 2. Run the UDE server
+
+Open a terminal in the generated project and run **InSpatial Cloud**:
+
+```bash
+cd server
+inspatial run dev
+```
+
+### 3. Run the UDE client
+
+Open a second terminal in the generated project and run **InSpatial Kit**:
+
+```bash
+cd client
+inspatial run dev
+```
+
+> Keep both terminals running while you build.
