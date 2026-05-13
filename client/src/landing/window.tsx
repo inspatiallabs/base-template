@@ -3,7 +3,7 @@ import { Widget } from "@inspatial/kit/recursive";
 import { iss } from "@inspatial/kit/style";
 import { LandingStyle } from "./style.ts";
 import type { LandingProps } from "./type.ts";
-import { getSection } from "./action.ts";
+import { getSection } from "./cloud.ts";
 
 /*################################(WINDOW)################################*/
 export function LandingWindow(props: LandingProps) {
