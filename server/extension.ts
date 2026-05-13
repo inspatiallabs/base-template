@@ -4,9 +4,9 @@ import { sectionEntry } from "./src/landing/entry.ts";
 
 
 /*################################## (Extension) ##################################*/
-export const bioloonExtension = defineExtension("bioloon", {
-  label: "Bioloon",
-  description: "The Bioloon extension.",
+export const appExtension = defineExtension("my_inspatial_app", {
+  label: "My Inspatial App",
+  description: "The My Inspatial App extension.",
   entryTypes: [sectionEntry],
   apiGroups: [landingAPI],
   settingsTypes: [],
