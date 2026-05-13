@@ -116,21 +116,18 @@ _Reality is your canvas_
 
 ---
 
-## Getting Started
+### Getting Started
 
-<div align="center">
+**Create a new InSpatial project, then run the UDE Cloud server and Kit client
+side by side.**
 
-**Create a new InSpatial project, then run the UDE Cloud server and Kit client side by side.**
-
-</div>
-
-### 1. Create your project
+#### 1. Create your project
 
 ```bash
 inspatial create https://github.com/inspatiallabs/base-template
 ```
 
-### 2. Run the UDE server
+#### 2. Run the UDE server
 
 Open a terminal in the generated project and run **InSpatial Cloud**:
 
@@ -139,7 +136,7 @@ cd server
 inspatial run dev
 ```
 
-### 3. Run the UDE client
+#### 3. Run the UDE client
 
 Open a second terminal in the generated project and run **InSpatial Kit**:
 
