@@ -420,9 +420,5 @@
     "@in/vader/splice": "../../../inspatial-kit/modules/in-vader/src/splice.ts",
     "@in/vader/split-first": "../../../inspatial-kit/modules/in-vader/src/split-first.ts",
     "@in/vader/ulid": "../../../inspatial-kit/modules/in-vader/src/ulid.ts"
-  },
-  "deploy": {
-    "org": "beamlabs",
-    "app": "bioloon"
   }
 }
