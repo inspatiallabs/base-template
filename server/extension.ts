@@ -1,6 +1,7 @@
 import { defineExtension } from "@inspatial/cloud";
-import { landingAPI } from "./landing/api.ts";
-import { sectionEntry } from "./landing/entry.ts";
+import { landingAPI } from "./src/landing/api.ts";
+import { sectionEntry } from "./src/landing/entry.ts";
+
 
 /*################################## (Extension) ##################################*/
 export const bioloonExtension = defineExtension("bioloon", {
