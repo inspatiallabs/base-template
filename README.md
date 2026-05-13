@@ -144,6 +144,8 @@ irm inspati.ai/install.ps1 | iex
 irm inspatial.sh/install.ps1 | iex
 ```
 
+</details>
+
 ---
 
 ### Getting Started
