@@ -16,7 +16,7 @@
     "DB_USER": "postgres",
     "DB_CONNECTION_TYPE": "tcp",
     "DB_PASSWORD": "postgres",
-    "DB_NAME": "bioloon_ii",
+    "DB_NAME": "my_inspatial_app", 
     "ALLOWED_ORIGINS": [
       "*"
     ],
@@ -27,6 +27,6 @@
     "EMBEDDED_DB": false,
     "ORM_DEBUG_MODE": false,
     "EMBEDDED_DB_PORT": 11527,
-    "name": "bioloon"
+    "name": "My-Inspatial-App"
   }
 }
