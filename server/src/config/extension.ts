@@ -1,6 +1,6 @@
 import { defineExtension } from "@inspatial/cloud";
-import { landingAPI } from "./src/landing/api.ts";
-import { sectionEntry } from "./src/landing/entry.ts";
+import { sectionEntry } from "../landing/entry";
+import { landingAPI } from "../landing/api";
 
 
 /*################################## (Extension) ##################################*/
