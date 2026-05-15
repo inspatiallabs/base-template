@@ -158,15 +158,15 @@
     }
   },
   "tasks": {
-    "dev": "deno run --env-file=../server/.env --unstable-bundle --allow-net --allow-read --allow-write --allow-env --allow-run src/config/render.ts",
-    "tunnel": "deno run --env-file=../server/.env --unstable-bundle --allow-run --allow-net --allow-read --allow-write --allow-env src/config/render.ts --inspatial-tunnel",
-    "build": "deno task dev --inspatial-build",
-    "serve": "deno task dev",
-    "kit:lighthouse": "deno run -A .inspatial/scripts/lighthouse.ts",
-    "routes": "deno run -A .inspatial/scripts/route.ts",
+    "dev": "inspatial kit dev",
+    "tunnel": "inspatial kit tunnel",
+    "build": "inspatial kit build",
+    "serve": "inspatial kit dev",
+    "kit:lighthouse": "inspatial kit lighthouse",
+    "routes": "inspatial kit routes",
     "test": "deno test --allow-all --no-check",
     "benchmark": "deno bench --allow-all --no-check",
-    "clean": "rm -rf dist && rm -rf node_modules && rm -rf deno.lock && rm -rf src/app/.inroute && rm -rf .inspatial && rm -rf coverage"
+    "clean": "inspatial kit clean"
   },
   "compilerOptions": {
     "lib": [
