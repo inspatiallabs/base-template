@@ -67,6 +67,9 @@
       "state": {
         "pattern": "explicit"
       },
+      "cloud": {
+        "pattern": "scalar"
+      },
       "test": {
         "pattern": "bdd"
       },
